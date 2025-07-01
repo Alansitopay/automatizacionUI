@@ -46,7 +46,8 @@ public class BaseTests {
             driver = new ChromeDriver();
             driver.get("https://the-internet.herokuapp.com/");
             homePage = new HomePage(driver);
-            homePage.clickFormAuthLink();
+            homePage.clickShiftingContent().example1().findLiElements();
+            driver.quit();
         }
 
     public static void main(String[] args) {
