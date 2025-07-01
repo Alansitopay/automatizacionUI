@@ -48,9 +48,9 @@ public class BaseTests {
             homePage = new HomePage(driver);
             homePage.clickFormAuthLink();
         }
-    }
 
-public static void main(String[] args) {
-    BaseTests baseTests = new BaseTests();
-    baseTests.setUp();
+    public static void main(String[] args) {
+        BaseTests baseTests = new BaseTests();
+        baseTests.setUp();
+    }
 }
