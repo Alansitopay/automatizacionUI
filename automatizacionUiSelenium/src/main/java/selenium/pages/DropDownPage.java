@@ -11,8 +11,8 @@ import java.util.List;
 public class DropDownPage {
 
     private WebDriver driver;
-    private By dropdown = By.id("Dropdown");
-    private WebElement dropDownElement = driver.findElement(dropdown);
+    private By dropdown = By.id("dropdown");
+    //private WebElement dropDownElement = driver.findElement(dropdown);
 
     public DropDownPage(WebDriver driver) {
         this.driver = driver;

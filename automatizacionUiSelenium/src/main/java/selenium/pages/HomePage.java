@@ -35,8 +35,12 @@ public class HomePage extends BasePage{
     }
 
     public DropDownPage clickDropDownPage (){
-        driver.findElement(dropdownLink).click();
+        clickLink("Dropdown");
         return new DropDownPage(driver);
     }
 
+    public ForgotPasswordPage clickForgotPassword () {
+        clickLink("Forgot Password");
+        return new ForgotPasswordPage(driver);
+    }
 }
