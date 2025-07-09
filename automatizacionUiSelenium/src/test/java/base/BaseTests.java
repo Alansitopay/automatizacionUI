@@ -5,13 +5,15 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import selenium.pages.HomePage;
 
 import java.util.List;
 
 public class BaseTests {
-    private WebDriver driver;
-    private HomePage homePage;
+    protected WebDriver driver;
+    protected HomePage homePage;
 
     ////////////////////DRIVERS/////////////////////
     /*public void setUp(){
@@ -42,15 +44,16 @@ public class BaseTests {
         //}
 
         //System.out.println(driver.getTitle());
+
+        @BeforeClass
         public void setUp(){
             driver = new ChromeDriver();
             driver.get("https://the-internet.herokuapp.com/");
             homePage = new HomePage(driver);
-            homePage.clickFormAuthLink();
         }
-    }
 
-public static void main(String[] args) {
-    BaseTests baseTests = new BaseTests();
-    baseTests.setUp();
+        @AfterClass
+        public void tearDown (){
+            driver.quit();
+        }
 }
