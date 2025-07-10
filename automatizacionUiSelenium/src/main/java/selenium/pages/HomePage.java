@@ -58,4 +58,9 @@ public class HomePage extends BasePage{
         clickLink("JavaScript Alerts");
         return new AlertsPage(driver);
     }
+
+    public FileUploadPage clickFileUpload(){
+        clickLink("File Upload");
+        return new FileUploadPage(driver);
+    }
 }
