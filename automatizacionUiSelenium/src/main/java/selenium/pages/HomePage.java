@@ -2,6 +2,8 @@ package selenium.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage extends BasePage{
 
@@ -62,5 +64,14 @@ public class HomePage extends BasePage{
     public FileUploadPage clickFileUpload(){
         clickLink("File Upload");
         return new FileUploadPage(driver);
+    }
+
+    public EntryAdPage clickEntryAd (){
+        clickLink("Entry Ad");
+        WebDriverWait wait = new WebDriverWait(driver,1);
+        wait.until(ExpectedConditions.visibilityOf(
+                driver.findElement(
+                        By.className("modal"))));
+        return new EntryAdPage(driver);
     }
 }

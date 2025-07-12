@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeClass;
 import selenium.pages.HomePage;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class BaseTests {
     protected WebDriver driver;
@@ -49,6 +50,7 @@ public class BaseTests {
         public void setUp(){
             driver = new ChromeDriver();
             driver.get("https://the-internet.herokuapp.com/");
+            //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
             homePage = new HomePage(driver);
         }
 
