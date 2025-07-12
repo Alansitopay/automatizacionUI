@@ -74,4 +74,9 @@ public class HomePage extends BasePage{
                         By.className("modal"))));
         return new EntryAdPage(driver);
     }
+
+    public ContextMenuPage clickContextMenu (){
+        clickLink("Context Menu");
+        return new ContextMenuPage (driver);
+    }
 }
