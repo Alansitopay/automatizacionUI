@@ -79,4 +79,11 @@ public class HomePage extends BasePage{
         clickLink("Context Menu");
         return new ContextMenuPage (driver);
     }
+
+    public NestedFramesPage clickNestedFrames(){
+        clickLink("Nested Frames");
+        return new NestedFramesPage(driver);
+    }
+
+
 }
