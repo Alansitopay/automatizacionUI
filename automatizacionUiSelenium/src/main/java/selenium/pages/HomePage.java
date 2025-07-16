@@ -85,5 +85,10 @@ public class HomePage extends BasePage{
         return new NestedFramesPage(driver);
     }
 
+    public LargeAndDeepDomPage clickLargeAndDeepDom(){
+        clickLink("Large & Deep DOM");
+        return new LargeAndDeepDomPage(driver);
+    }
+
 
 }
