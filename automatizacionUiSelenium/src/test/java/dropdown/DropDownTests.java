@@ -10,11 +10,11 @@ public class DropDownTests extends BaseTests {
     public void testSelectOption(){
         String option = "Option 1";
         var dropDownPage = homePage.clickDropDownPage();
+        dropDownPage.turnInToMultiple();
         dropDownPage.selectFromDropDown("Option 1");
         var selectedOptions = dropDownPage.getSelectedOption();
         //Me asegure completamente que las validaciones controlan todo lo que espero que suceda
         Assert.assertEquals(selectedOptions.size(),1);
         Assert.assertTrue(selectedOptions.contains(option));
     }
-
 }
