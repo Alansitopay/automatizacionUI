@@ -90,5 +90,10 @@ public class HomePage extends BasePage{
         return new LargeAndDeepDomPage(driver);
     }
 
+    public InfiniteScroll clickInfiniteScroll(){
+        clickLink("Infinite Scroll");
+        return new InfiniteScroll(driver);
+    }
+
 
 }
